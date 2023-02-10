@@ -9,7 +9,7 @@ then
   function json-cli-install() {
    curl -OL https://github.com/swaggest/json-cli/releases/download/v1.11.1/json-cli
    chmod +x json-cli
-   mv json-cli /usr/local/bin/json-cli
+   sudo mv json-cli /usr/local/bin/json-cli
   }
 
   json-cli-install
