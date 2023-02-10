@@ -38,7 +38,7 @@ Stop polluting your `~/bin` directory and your `.bashrc` file, fork/clone Bash-i
 ## Installation
 
 1) Check out a clone of this repo to a location of your choice, such as
-   ``git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it``
+   ``git clone -b dev --depth=1 https://github.com/tosin2013/bash-it.git ~/.bash_it``
 2) Run ``~/.bash_it/install.sh``
 
 That's it! :smiley:  
@@ -46,6 +46,12 @@ That's it! :smiley:
 You can check out more components of Bash-it, and customize it to your desire.  
 For more information, see detailed instructions [here](https://bash-it.readthedocs.io/en/latest/installation/).
 
+
+## Testing 
+```
+export BASH_IT_LOG_LEVEL=BASH_IT_LOG_LEVEL_ALL
+bash-it enable plugin json-cli
+```
 
 ## Contributing
 
