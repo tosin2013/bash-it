@@ -4,13 +4,17 @@ set -x
 cite about-plugin
 about-plugin 'A CLI app to find unordered diff between two JSON documents (based on swaggest/json-diff), generate JSON Schema and Go/PHP code, pretty print, minify, yaml convert, etc....'
 
-if [ ! -f "/usr/local/bin/json-cli" ]; then
+if ! _command_exists json-cli
+then
+  function json-cli() {
    curl -OL https://github.com/swaggest/json-cli/releases/download/v1.11.1/json-cli
    chmod +x json-cli
    mv json-cli /usr/local/bin/json-cli
-elif [ -f "/usr/bin/json-cli" ]; then
+  }
+
   json-cli
 fi
+
 
 function json-cli_on_disable() {
   about 'Destructor of json-cli plugin'
