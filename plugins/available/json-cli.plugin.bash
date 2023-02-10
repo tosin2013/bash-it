@@ -1,6 +1,7 @@
 # shellcheck shell=bash
 # stub for renamed file
-set -x
+# https://github.com/swaggest/json-cli
+#set -x
 cite about-plugin
 about-plugin 'A CLI app to find unordered diff between two JSON documents (based on swaggest/json-diff), generate JSON Schema and Go/PHP code, pretty print, minify, yaml convert, etc....'
 
