@@ -6,13 +6,13 @@ about-plugin 'A CLI app to find unordered diff between two JSON documents (based
 
 if ! _command_exists json-cli
 then
-  function json-cli() {
+  function json-cli-install() {
    curl -OL https://github.com/swaggest/json-cli/releases/download/v1.11.1/json-cli
    chmod +x json-cli
    mv json-cli /usr/local/bin/json-cli
   }
 
-  json-cli
+  json-cli-install
 fi
 
 
