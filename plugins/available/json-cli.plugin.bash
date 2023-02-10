@@ -41,5 +41,5 @@ function json-cli_on_disable() {
   about 'Destructor of json-cli plugin'
   group 'json-cli'
 
-  rm -f /usr/local/bin/json-cli
+  sudo rm -f /usr/local/bin/json-cli
 }
