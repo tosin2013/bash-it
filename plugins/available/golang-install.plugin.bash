@@ -9,11 +9,15 @@ if ! _command_exists go
 then
 
   function go-install() {
-    export BASH_IT_LOG_LEVEL=BASH_IT_LOG_LEVEL_ALL
-    wget https://storage.googleapis.com/golang/getgo/installer_linux
-    chmod +x ./installer_linux
-    ./installer_linux 
-    unset $BASH_IT_LOG_LEVEL
+    if [ ! -f /home/${HOME}/.go/bin/go ];
+    then 
+      export BASH_IT_LOG_LEVEL=BASH_IT_LOG_LEVEL_ALL
+      wget https://storage.googleapis.com/golang/getgo/installer_linux
+      chmod +x ./installer_linux
+      ./installer_linux 
+      source /home/${USER}/.bash_profile
+      unset $BASH_IT_LOG_LEVEL
+    fi
   }
 
   go-install
@@ -24,5 +28,8 @@ function go_on_disable() {
   about 'Destructor of go plugin'
   group 'go'
 
-  sudo rm -f /usr/local/bin/go
+  sudo rm -f /home/${HOME}/.go/bin/go
 }
+
+
+# go install github.com/spf13/cobra-cli@latest
