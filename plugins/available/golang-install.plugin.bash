@@ -9,7 +9,7 @@ if ! _command_exists go
 then
 
   function go-install() {
-    if [ ! -f /home/${HOME}/.go/bin/go ];
+    if [ ! -f /home/${USER}/.go/bin/go ];
     then 
       export BASH_IT_LOG_LEVEL=BASH_IT_LOG_LEVEL_ALL
       wget https://storage.googleapis.com/golang/getgo/installer_linux
